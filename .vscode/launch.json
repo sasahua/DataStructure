@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/01_Complexity/src/Fibonacci/bin/Debug/netcoreapp3.0/Fibonacci.dll",
+            "program": "${workspaceFolder}/02_ArrayList/src/ArrayList/bin/Debug/netcoreapp3.0/ArrayList.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/01_Complexity/src/Fibonacci",
+            "cwd": "${workspaceFolder}/02_ArrayList/src/ArrayList",
             "console": "internalConsole",
             "stopAtEntry": false
         },
