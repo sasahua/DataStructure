@@ -84,24 +84,39 @@ namespace ArrayList
             {
                 _elements[i] = _elements[i+1];
             }
-            _size--;
+            _elements[--_size] = default(T);
             return oldElement;
         }           
         
         //查看元素位置
         public int IndexOf(T element)
         {
-            for (int i = 0; i < _size; i++)
+            if(element == null)
             {
-                if(element.Equals(_elements[i]))
-                    return i;
+                for (int i = 0; i < _size; i++)
+                {
+                    if(_elements[i] == null)
+                        return i;
+                }
             }
+            else{
+                for (int i = 0; i < _size; i++)
+                {
+                    if(element.Equals(_elements[i]))
+                        return i;
+                }   
+            }
+            
             return _elementNotFound;
         }
         
         //清除所有元素
         public void Clear()
         {
+            for (int i = 0; i < _size; i++)
+            {
+                _elements[i] = default(T);
+            }
             this._size = 0;
         }                   
         
